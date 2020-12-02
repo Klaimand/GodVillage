@@ -30,25 +30,28 @@ public class KLD_VillagePlacer : MonoBehaviour
         {
             validatePosition();
         }*/
+        //spawnedObjInst = placeOnPlane.spawnedObject;
+
     }
 
     public void validatePosition()
     {
         isPlacingVillage = false;
+        spawnedObjInst = placeOnPlane.spawnedObject;
         placeOnPlane.enabled = false;
         //getCurVillageInst();
 
-        spawnedObjInst = placeOnPlane.spawnedObject;
 
         if (spawnedObjInst != null)
         {
-            curTouchScaler = spawnedObjInst.GetComponent<KLD_TouchScaler>();
+            curTouchScaler = spawnedObjInst.transform.GetChild(0).GetComponent<KLD_TouchScaler>();
             curTouchScaler.isScalable = true;
 
         }
         else
         {
             Debug.LogError("there is no spawnedobj");
+            print("there is no spawnedobj_p");
         }
 
 

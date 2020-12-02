@@ -17,6 +17,12 @@ public class KLD_TouchScaler : MonoBehaviour
 
     float curTouchDistance, lastFrameTouchDistance;
 
+    MeshRenderer meshRenderer;
+
+    private void Awake()
+    {
+        meshRenderer = GetComponent<MeshRenderer>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -33,26 +39,49 @@ public class KLD_TouchScaler : MonoBehaviour
         {
             doScale();
         }
+        else
+        {
+            meshRenderer.material.color = Color.gray;
+        }
+
+        linkScale();
     }
 
     void doScale()
     {
         if (Input.touchCount >= 2)
         {
+            meshRenderer.material.color = Color.green;
+
             lastFrameTouchDistance = curTouchDistance;
 
 
             Vector2 a = Input.GetTouch(0).position;
             Vector2 b = Input.GetTouch(1).position;
+            //Vector2 b = Vector2.one * 0.5f;
+
+            //print(a);
 
             curTouchDistance = Vector2.Distance(a, b);
 
             float distanceDelta = curTouchDistance - lastFrameTouchDistance;
 
-            curScale += distanceDelta * sensitivity;
+            curScale += distanceDelta * sensitivity * 0.01f;
 
+            curScale = Mathf.Clamp(curScale, minMaxScale.x, minMaxScale.y);
 
         }
+        else
+        {
+            meshRenderer.material.color = Color.red;
+
+            print("not enough touches");
+        }
+    }
+
+    void linkScale()
+    {
+        transform.localScale = Vector3.one * curScale;
     }
 
 }
