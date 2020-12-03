@@ -17,27 +17,32 @@ public class BDC_MiningMinigame : MonoBehaviour
     {
         Touch touch = Input.GetTouch(0);
 
-        if (miningPhase == true)
-        {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                miningTouchCount++;
 
-                if (miningTouchCount > numberOfTouchRequiredMining)
+
+        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        {
+
+            Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            RaycastHit hit;
+
+            if (Physics.Raycast(raycast, out hit))
+            {
+                if (hit.collider.CompareTag("Minerals"))
                 {
-                    canvasMining.GetComponent<SpriteRenderer>().enabled = false;
-                    miningPhase = false;
-                    miningTouchCount = 0;
-                }   
+                    miningTouchCount++;
+
+                }
             }
 
-        }
-    }
+            if (miningTouchCount > numberOfTouchRequiredMining)
+            {
 
-    public void MiningMinigame()
-    {
-        canvasMining.GetComponent<SpriteRenderer>() .enabled = true;
-        miningPhase = true;
+                miningTouchCount = 0;
+                Destroy(gameObject);
+            }
+
+
+        }
 
     }
 

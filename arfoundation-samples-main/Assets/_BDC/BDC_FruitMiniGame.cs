@@ -17,28 +17,33 @@ public class BDC_FruitMiniGame : MonoBehaviour
     {
         Touch touch = Input.GetTouch(0);
 
-        if (fruitPhase == true)
-        {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                miningTouchCount++;
 
-                if (miningTouchCount > numberOfTouchRequiredMining)
+
+        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Moved))
+        {
+
+            Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            RaycastHit hit;
+
+            if (Physics.Raycast(raycast, out hit))
+            {
+                if (hit.collider.CompareTag("Tree"))
                 {
-                    canvasFruit.GetComponent<SpriteRenderer>().enabled = false;
-                    fruitPhase = false;
-                    miningTouchCount = 0;
+                    treeTouchCount++;
+
                 }
             }
 
+            if (treeTouchCount > numberofTouchRequiredTree)
+            {
+
+                treeTouchCount = 0;
+                Destroy(gameObject);
+            }
+
+
         }
+  
+    
     }
 
-    public void MiningMinigame()
-    {
-        canvasFruit.GetComponent<SpriteRenderer>().enabled = true;
-        fruitPhase = true;
-
-    }
-
-}
