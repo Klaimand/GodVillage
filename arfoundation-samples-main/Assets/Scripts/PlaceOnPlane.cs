@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.EventSystems;
 
 namespace UnityEngine.XR.ARFoundation.Samples
 {
@@ -55,7 +56,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             if (!TryGetTouchPosition(out Vector2 touchPosition))
                 return;
 
-            if (m_RaycastManager.Raycast(touchPosition, s_Hits, TrackableType.PlaneWithinPolygon))
+            if (!isPointOverUI(touchPosition) && m_RaycastManager.Raycast(touchPosition, s_Hits, TrackableType.PlaneWithinPolygon))
             {
                 // Raycast hits are sorted by distance, so the first one
                 // will be the closest hit.
@@ -75,5 +76,23 @@ namespace UnityEngine.XR.ARFoundation.Samples
         static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
         ARRaycastManager m_RaycastManager;
+
+        bool isPointOverUI(Vector2 pos)
+        {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return false;
+            }
+
+            PointerEventData eventPosition = new PointerEventData(EventSystem.current);
+            eventPosition.position = new Vector2(pos.x, pos.y);
+
+            List<RaycastResult> results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(eventPosition, results);
+
+            return results.Count > 0;
+
+        }
+
     }
 }
