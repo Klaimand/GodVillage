@@ -128,7 +128,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SimpleAR/SimpleAR.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/_YTH/YTH_Scene/_YTH_MainMenu_1.unity
     guid: 82d56522be6b3024093fa9a7b05068b3
   - enabled: 1

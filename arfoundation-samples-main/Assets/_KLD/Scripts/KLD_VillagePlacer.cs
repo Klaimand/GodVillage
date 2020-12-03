@@ -14,6 +14,13 @@ public class KLD_VillagePlacer : MonoBehaviour
     GameObject spawnedObjInst;
     KLD_TouchScaler curTouchScaler;
 
+    KLD_GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = GetComponent<KLD_GameManager>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +53,12 @@ public class KLD_VillagePlacer : MonoBehaviour
         {
             curTouchScaler = spawnedObjInst.transform.GetChild(0).GetComponent<KLD_TouchScaler>();
             curTouchScaler.isScalable = true;
+
+            KLD_Village_Variables curVillage_Variables = spawnedObjInst.GetComponent<KLD_Village_Variables>();
+            curVillage_Variables.assignTargetCam(gameManager.simulationCam);
+            gameManager.RessourceUIParents = curVillage_Variables.RessourceUIParentsInst;
+            gameManager.initializeTextes();
+            gameManager.updateTowerUI();
 
         }
         else

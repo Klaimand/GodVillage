@@ -7,8 +7,8 @@ public class KLD_WorldCanvasToCam : MonoBehaviour
     [SerializeField]
     Transform rotateObj;
 
-    [SerializeField]
-    Transform targetCam;
+    //[SerializeField]
+    public Transform targetCam;
 
     [SerializeField]
     CanvasGroup canvasGroup;

@@ -15,8 +15,7 @@ public class KLD_GameManager : MonoBehaviour
     [SerializeField]
     Ressource[] ressourcesPerLevel;
 
-    [SerializeField]
-    GameObject[] RessourceUIParents;
+    public GameObject[] RessourceUIParents;
 
 
     TMP_Text curNourritureText, neededNourritureText;
@@ -30,6 +29,8 @@ public class KLD_GameManager : MonoBehaviour
 
     [SerializeField]
     GameObject[] towers;
+
+    public Transform simulationCam;
 
     /*
     public enum RessourceType
@@ -47,8 +48,8 @@ public class KLD_GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initializeTextes();
-        updateTowerUI();
+        //initializeTextes();
+        //updateTowerUI();
     }
 
     // Update is called once per frame
@@ -57,7 +58,7 @@ public class KLD_GameManager : MonoBehaviour
 
     }
 
-    void initializeTextes()
+    public void initializeTextes()
     {
         curNourritureText = RessourceUIParents[0].transform.GetChild(0).GetComponent<TMP_Text>();
         neededNourritureText = RessourceUIParents[0].transform.GetChild(2).GetComponent<TMP_Text>();
@@ -153,7 +154,7 @@ public class KLD_GameManager : MonoBehaviour
 
     }
 
-    void updateTowerUI()
+    public void updateTowerUI()
     {
         curNourritureText.text = ressources.nourriture.ToString();
         neededNourritureText.text = ressourcesPerLevel[curVillageLevel].nourriture.ToString();
@@ -175,8 +176,6 @@ public class KLD_GameManager : MonoBehaviour
 
         curAstateText.text = ressources.astate.ToString();
         neededAstateText.text = ressourcesPerLevel[curVillageLevel].astate.ToString();
-
-
     }
 
 }
