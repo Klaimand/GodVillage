@@ -801,6 +801,7 @@ MonoBehaviour:
   - {fileID: 3031452288719489729}
   - {fileID: 5766706801017931684}
   - {fileID: 5896118732361582053}
+  Baies: {fileID: 5103309895495540462, guid: 0c9cf02c488143847bf6dd91fa91d180, type: 3}
   numberOfFruits: 0
 --- !u!1 &7359072520460067632
 GameObject:
