@@ -6,9 +6,9 @@ using UnityEngine.Events;
 public class BDC_MiningMinigame : MonoBehaviour
 {
 
-    public UnityEvent onClickMining;
+
     public int numberOfTouchRequiredMining = 10;
-    public int miningTouchCount;
+    private int miningTouchCount;
 
 
     void Update()

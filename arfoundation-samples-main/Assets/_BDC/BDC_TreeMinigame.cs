@@ -4,12 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class BDC_TreeMinigame : MonoBehaviour
-{
-    public UnityEvent onClickTree;
-    public GameObject canvasTree;
-    public bool treePhase;
+{ 
     public int numberofTouchRequiredTree = 10;
-    public int treeTouchCount;
+    private int treeTouchCount;
 
 
     void Update()

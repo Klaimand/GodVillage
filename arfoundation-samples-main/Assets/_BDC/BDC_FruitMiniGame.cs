@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class BDC_FruitMiniGame : MonoBehaviour
 {
     public GameObject[] fruits;
-    public int fruitRessources;
+    private int fruitRessources;
     public int numberOfFruits;
 
     private void Start()
