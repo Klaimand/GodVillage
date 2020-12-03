@@ -7,16 +7,12 @@ public class BDC_MiningMinigame : MonoBehaviour
 {
 
     public UnityEvent onClickMining;
-    public GameObject canvasMining;
-    public bool miningPhase;
     public int numberOfTouchRequiredMining = 10;
     public int miningTouchCount;
 
 
     void Update()
     {
-        Touch touch = Input.GetTouch(0);
-
 
 
         if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))

@@ -14,10 +14,6 @@ public class BDC_TreeMinigame : MonoBehaviour
 
     void Update()
     {
-        Touch touch = Input.GetTouch(0);
-
-
-       
             if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Moved))
             {
 
