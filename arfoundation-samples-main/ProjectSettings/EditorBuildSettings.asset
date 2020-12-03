@@ -128,15 +128,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SimpleAR/SimpleAR.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/_YTH/YTH_Scene/_YTH_MainMenu_1.unity
     guid: 82d56522be6b3024093fa9a7b05068b3
-  - enabled: 1
+  - enabled: 0
     path: Assets/_KLD/_Scenes/_StartScene.unity
     guid: c73330bbacb5ee44ab1ae60c9d15aab2
   - enabled: 0
     path: Assets/_KLD/_Scenes/KLD_ScaleTest.unity
     guid: 533a9d13fe511dd438cd80fab017e164
+  - enabled: 1
+    path: Assets/_YTH/YTH_Scene/_YTH_FruitTest.unity
+    guid: 91127522727703c408b4bea662b5f66d
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f8ce26fe3bc69499b9be4b2378e97a94,
       type: 2}
