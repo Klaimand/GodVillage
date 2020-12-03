@@ -13,7 +13,22 @@ public class KLD_MenuFunctions : MonoBehaviour
     ARPlaneManager planeManager;
     ARPointCloudManager pointCloudManager;
 
+    KLD_RandomPointPlacer randomPointPlacer;
+
     bool isArDebugVisible = true;
+
+    [Header("SpawnPointsPlacer"), SerializeField]
+    float minDistanceBetweenPoints = 10f;
+    [SerializeField]
+    GameObject spawnPointObj;
+
+    List<Vector3> spawnPointsPositions = new List<Vector3>();
+
+
+    private void Awake()
+    {
+        randomPointPlacer = GetComponent<KLD_RandomPointPlacer>();
+    }
 
     private void Start()
     {
@@ -64,5 +79,39 @@ public class KLD_MenuFunctions : MonoBehaviour
 
     }
 
+    public void addSpawnPointsToWorld(int _number)
+    {
+        for (int i = 0; i < _number + 1; i++)
+        {
+            bool isCurPointValid = false;
+            Vector3 verifiedSpPosition = Vector3.zero;
+            do
+            {
+
+                Vector3 pointInst = randomPointPlacer.getRandomPointOnPlane();
+
+                bool isPositionTooClose = false;
+                foreach (Vector3 spPosition in spawnPointsPositions)
+                {
+                    if (Vector3.Distance(pointInst, spPosition) < minDistanceBetweenPoints)
+                    {
+                        isPositionTooClose = true;
+                    }
+                }
+
+                isCurPointValid = !isPositionTooClose;
+
+                if (isCurPointValid)
+                {
+                    verifiedSpPosition = pointInst;
+                }
+
+            } while (!isCurPointValid);
+
+            //inst
+            Instantiate(spawnPointObj, verifiedSpPosition, Quaternion.identity);
+
+        }
+    }
 
 }
