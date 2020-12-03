@@ -137,9 +137,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_KLD/_Scenes/KLD_ScaleTest.unity
     guid: 533a9d13fe511dd438cd80fab017e164
-  - enabled: 1
+  - enabled: 0
     path: Assets/_YTH/YTH_Scene/_YTH_FruitTest.unity
     guid: 91127522727703c408b4bea662b5f66d
+  - enabled: 1
+    path: Assets/_YTH/YTH_Scene/_YTH_StartScene.unity
+    guid: 45008b0cd8140534881bbcd9241aeff2
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f8ce26fe3bc69499b9be4b2378e97a94,
       type: 2}
