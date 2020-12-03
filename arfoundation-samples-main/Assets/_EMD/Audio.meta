@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:arfoundation-samples-main/Assets/_EMD/Audio.meta
 guid: 1e799d2ea8d14cb4984fbedc93373da2
+=======
+guid: ba3fd005c0308e340925e8384df620e1
+>>>>>>> origin/BDC_Branch:arfoundation-samples-main/Assets/KLD_Imported/Unity-Logs-Viewer-master.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

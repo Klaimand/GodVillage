@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 8534656a56dd5854996fecda36e56a7d
+=======
+guid: b428bb2dc130a73489c5e4641eca4478
+>>>>>>> origin/BDC_Branch
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
