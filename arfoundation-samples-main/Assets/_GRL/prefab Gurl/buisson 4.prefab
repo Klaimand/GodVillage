@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5754582570569714916}
   - component: {fileID: 5170584207163564659}
   - component: {fileID: 5530925047645117837}
+  - component: {fileID: 1154821354342965762}
   m_Layer: 0
   m_Name: "Sph\xE8re.017"
   m_TagString: Untagged
@@ -79,6 +80,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1154821354342965762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115435072909800328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48ea92f6ab25604ba28c3ce282d240f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1880486569367370030
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +103,7 @@ GameObject:
   - component: {fileID: 6190110544818024784}
   - component: {fileID: 3774365571562128358}
   - component: {fileID: 1708732573180565086}
+  - component: {fileID: 3313785393283284419}
   m_Layer: 0
   m_Name: "Sph\xE8re.016"
   m_TagString: Untagged
@@ -158,6 +172,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3313785393283284419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880486569367370030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48ea92f6ab25604ba28c3ce282d240f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1999048475874036194
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +274,7 @@ GameObject:
   - component: {fileID: 4497633920223049293}
   - component: {fileID: 3239338683875819858}
   - component: {fileID: 8075175992819158477}
+  - component: {fileID: 3301109336012164130}
   m_Layer: 0
   m_Name: "Sph\xE8re.014"
   m_TagString: Untagged
@@ -316,6 +343,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3301109336012164130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280777369571071409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48ea92f6ab25604ba28c3ce282d240f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6831064616547121064
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +366,7 @@ GameObject:
   - component: {fileID: 1619553101302324432}
   - component: {fileID: 4291176931055097954}
   - component: {fileID: 1122925778170238044}
+  - component: {fileID: 8821652454178973861}
   m_Layer: 0
   m_Name: "Sph\xE8re.015"
   m_TagString: Untagged
@@ -395,6 +435,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8821652454178973861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6831064616547121064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48ea92f6ab25604ba28c3ce282d240f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8045981623714870435
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7269584975151246873}
+  - component: {fileID: 7001754261514243717}
   m_Layer: 0
   m_Name: buisson 4
   m_TagString: Untagged
@@ -419,7 +472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8045981623714870435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.11987, y: 8.3234005, z: -3.286973}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6612404452664873055}
@@ -433,6 +486,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7001754261514243717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8045981623714870435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a2edda1ee86564f9d8ee2c5ecca784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruits:
+  - {fileID: 8805047891791284410}
+  - {fileID: 5280777369571071409}
+  - {fileID: 6831064616547121064}
+  - {fileID: 1880486569367370030}
+  - {fileID: 115435072909800328}
+  - {fileID: 8290805400015588499}
+  - {fileID: 9099094743357685822}
+  numberOfFruits: 0
 --- !u!1 &8290805400015588499
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +518,7 @@ GameObject:
   - component: {fileID: 2992436434261772437}
   - component: {fileID: 8819794492512533024}
   - component: {fileID: 6986373692889369736}
+  - component: {fileID: 8530263177965721344}
   m_Layer: 0
   m_Name: "Sph\xE8re.018"
   m_TagString: Untagged
@@ -512,6 +587,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8530263177965721344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290805400015588499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48ea92f6ab25604ba28c3ce282d240f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8805047891791284410
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +610,7 @@ GameObject:
   - component: {fileID: 6096274801623605038}
   - component: {fileID: 8145193198355981169}
   - component: {fileID: 8526449466276879471}
+  - component: {fileID: 5627715742220769880}
   m_Layer: 0
   m_Name: "Sph\xE8re.013"
   m_TagString: Untagged
@@ -591,6 +679,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5627715742220769880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8805047891791284410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48ea92f6ab25604ba28c3ce282d240f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9099094743357685822
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +702,7 @@ GameObject:
   - component: {fileID: 3144685431679814958}
   - component: {fileID: 8369505880737797958}
   - component: {fileID: 7328815844478952166}
+  - component: {fileID: 7377354720169949755}
   m_Layer: 0
   m_Name: "Sph\xE8re.019"
   m_TagString: Untagged
@@ -670,3 +771,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &7377354720169949755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9099094743357685822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48ea92f6ab25604ba28c3ce282d240f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
