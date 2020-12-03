@@ -335,20 +335,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7a4573c8c72b840bd768965489988b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onclick:
+  onClickMining:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  canvasMining: {fileID: 1229328983}
+  miningPhase: 0
+  numberOfTouchRequiredMining: 10
+  miningTouchCount: 0
 --- !u!65 &1255385792
 BoxCollider:
   m_ObjectHideFlags: 0
