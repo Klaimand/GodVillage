@@ -24,18 +24,28 @@ public class KLD_Debug_FreeCam : MonoBehaviour
 
         if (Input.GetButton("Fire1"))
         {
+            Cursor.lockState = CursorLockMode.Locked;
             rotateCam();
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
     void translateCam()
     {
-        transform.position += new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("ThirdAxis"), Input.GetAxisRaw("Vertical")) * speed * Time.deltaTime;
+        //transform.position += new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("ThirdAxis"), Input.GetAxisRaw("Vertical")) * speed * Time.deltaTime;
+        transform.position +=
+        (transform.right * Input.GetAxisRaw("Horizontal") +
+        Vector3.up * Input.GetAxisRaw("ThirdAxis") +
+        transform.forward * Input.GetAxisRaw("Vertical"))
+        * speed * Time.deltaTime;
     }
 
     void rotateCam()
     {
-        transform.Rotate(new Vector3(Input.GetAxisRaw("Mouse Y"), Input.GetAxisRaw("Mouse X") * -1f, 0f) * sensitivity * 10f * Time.deltaTime);
+        transform.Rotate(new Vector3(Input.GetAxisRaw("Mouse Y") * -1f, Input.GetAxisRaw("Mouse X"), 0f) * sensitivity * 10f * Time.deltaTime);
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0f);
     }
 }
