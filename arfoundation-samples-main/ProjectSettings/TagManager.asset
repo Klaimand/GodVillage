@@ -12,6 +12,8 @@ TagManager:
   - Volcan
   - Montagne
   - Obsidienne
+  - Astate
+  - Pierre
   layers:
   - Default
   - TransparentFX
