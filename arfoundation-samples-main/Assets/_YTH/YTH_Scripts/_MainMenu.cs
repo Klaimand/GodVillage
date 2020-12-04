@@ -6,27 +6,24 @@ using UnityEngine.SceneManagement;
 public class _MainMenu : MonoBehaviour
 {
     public GameObject mainMenuCanvas;
-    public GameObject quitConfirmationCanvas;
+    public GameObject village;
+    public GameObject page1;
     public void PlayeButton()
     {
         SceneManager.LoadScene(1);
     }
 
-    public void ConfirmationQuitting()
+    public void Page1()
     {
         mainMenuCanvas.SetActive(false);
-        quitConfirmationCanvas.SetActive(true);
+        page1.SetActive(true);
+        village.SetActive(false);
     }
 
     public void BackToMenu()
     {
         mainMenuCanvas.SetActive(true);
-        quitConfirmationCanvas.SetActive(false);
-    }
-
-    public void QuitButton()
-    {
-        Application.Quit();
-        print("Quit");
+        page1.SetActive(false);
+        village.SetActive(true);
     }
 }
