@@ -5,6 +5,13 @@ using UnityEngine.Events;
 
 public class BDC_TreeMinigame : MonoBehaviour
 {
+
+    [SerializeField]
+    GameObject popParticle;
+
+    [SerializeField]
+    GameObject bois_ressource;
+
     public int numberofTouchRequiredTree = 10;
     private int treeTouchCount;
 
@@ -22,13 +29,14 @@ public class BDC_TreeMinigame : MonoBehaviour
                 if (hit.collider.CompareTag("Tree"))
                 {
                     treeTouchCount++;
-
+                    Instantiate(popParticle, hit.point, Quaternion.identity);
                 }
             }
 
             if (treeTouchCount > numberofTouchRequiredTree)
             {
                 //instantiate ressources
+                Instantiate(bois_ressource, transform.position, Quaternion.identity);
                 treeTouchCount = 0;
                 Destroy(gameObject);
             }

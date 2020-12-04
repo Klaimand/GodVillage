@@ -6,8 +6,14 @@ public class _FruitsCollider : MonoBehaviour
 {
     BDC_FruitMiniGame fruitsGame;
 
+    KLD_GameManager gameManager;
+
+    public int neededLevel;
+
     private void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<KLD_GameManager>();
+
         fruitsGame = GetComponentInParent<BDC_FruitMiniGame>();
     }
 
@@ -22,9 +28,12 @@ public class _FruitsCollider : MonoBehaviour
             {
                 if (hit.collider.gameObject == gameObject)
                 {
-                    fruitsGame.numberOfFruits -= 1;
-                    print(gameObject.name + "Destroyed by " + this.name);
-                    Destroy(gameObject);
+                    if (gameManager.getVillageLevel() >= neededLevel)
+                    {
+                        fruitsGame.numberOfFruits -= 1;
+                        //print(gameObject.name + "Destroyed by " + this.name);
+                        Destroy(gameObject);
+                    }
                 }
             }
         }

@@ -9,6 +9,8 @@ public class BDC_FruitMiniGame : MonoBehaviour
     public GameObject Baies;
     public int numberOfFruits;
 
+    KLD_GameManager gameManager;
+
     private void Start()
     {
         numberOfFruits = fruits.Length;

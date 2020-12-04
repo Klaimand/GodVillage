@@ -155,6 +155,7 @@ public class KLD_GameManager : MonoBehaviour
             curVillageLevel++;
 
             updateTowerModel();
+            updateTowerUI();
 
         }
     }
@@ -186,6 +187,11 @@ public class KLD_GameManager : MonoBehaviour
 
         curAstateText.text = ressources.astate.ToString();
         neededAstateText.text = ressourcesPerLevel[curVillageLevel].astate.ToString();
+    }
+
+    public int getVillageLevel()
+    {
+        return curVillageLevel;
     }
 
 }
