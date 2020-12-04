@@ -17,6 +17,8 @@ public class KLD_TouchScaler : MonoBehaviour
 
     float curTouchDistance, lastFrameTouchDistance;
 
+    bool lastFrameNoTouch = true;
+
     //MeshRenderer meshRenderer;
 
     private void Awake()
@@ -64,6 +66,13 @@ public class KLD_TouchScaler : MonoBehaviour
 
             curTouchDistance = Vector2.Distance(a, b);
 
+            if (lastFrameNoTouch)
+            {
+                lastFrameTouchDistance = curTouchDistance;
+            }
+
+            lastFrameNoTouch = false;
+
             float distanceDelta = curTouchDistance - lastFrameTouchDistance;
 
             curScale += distanceDelta * sensitivity * 0.01f;
@@ -74,8 +83,8 @@ public class KLD_TouchScaler : MonoBehaviour
         else
         {
             //meshRenderer.material.color = Color.red;
-
-            print("not enough touches");
+            lastFrameNoTouch = true;
+            //print("not enough touches");
         }
     }
 

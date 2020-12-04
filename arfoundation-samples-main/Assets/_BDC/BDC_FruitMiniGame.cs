@@ -6,8 +6,10 @@ using UnityEngine.Events;
 public class BDC_FruitMiniGame : MonoBehaviour
 {
     public GameObject[] fruits;
-    private int fruitRessources;
+    public GameObject Baies;
     public int numberOfFruits;
+
+    KLD_GameManager gameManager;
 
     private void Start()
     {
@@ -17,7 +19,7 @@ public class BDC_FruitMiniGame : MonoBehaviour
     {
         if (numberOfFruits <= 0)
         {
-            //CurValue += fruitRessources
+            Instantiate(Baies, gameObject.transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

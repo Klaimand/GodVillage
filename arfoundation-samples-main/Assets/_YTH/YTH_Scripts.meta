@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD:arfoundation-samples-main/Assets/_BDC.meta
-guid: 953553abb987a5946af8d070eab72367
-=======
-guid: 602f92e5adb05cc44b5114736f8032cb
->>>>>>> origin/YTH_Branch:arfoundation-samples-main/Assets/_YTH/YTH_Scripts.meta
-=======
-guid: a674aa82077fa6947887c3c9b360b0ad
->>>>>>> f972252ddda33cb8ce1fcb38cdd37db363198c06
+guid: b428bb2dc130a73489c5e4641eca4478
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

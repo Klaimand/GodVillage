@@ -6,6 +6,8 @@ using TMPro;
 
 public class KLD_GameManager : MonoBehaviour
 {
+    KLD_VillagePlacer villagePlacer;
+
     [Header("Ressources"), SerializeField]
     Ressource ressources;
 
@@ -15,8 +17,7 @@ public class KLD_GameManager : MonoBehaviour
     [SerializeField]
     Ressource[] ressourcesPerLevel;
 
-    [SerializeField]
-    GameObject[] RessourceUIParents;
+    public GameObject[] RessourceUIParents;
 
 
     TMP_Text curNourritureText, neededNourritureText;
@@ -30,6 +31,11 @@ public class KLD_GameManager : MonoBehaviour
 
     [SerializeField]
     GameObject[] towers;
+
+    public Transform simulationCam;
+
+    //public List<List<GameObject>> ressourcesPrefabs = new List<List<GameObject>>();
+    public List<PrefabVariants> ressourcesPrefabs = new List<PrefabVariants>();
 
     /*
     public enum RessourceType
@@ -47,8 +53,9 @@ public class KLD_GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initializeTextes();
-        updateTowerUI();
+        //initializeTextes();
+        //updateTowerUI();
+        villagePlacer = GetComponent<KLD_VillagePlacer>();
     }
 
     // Update is called once per frame
@@ -57,7 +64,7 @@ public class KLD_GameManager : MonoBehaviour
 
     }
 
-    void initializeTextes()
+    public void initializeTextes()
     {
         curNourritureText = RessourceUIParents[0].transform.GetChild(0).GetComponent<TMP_Text>();
         neededNourritureText = RessourceUIParents[0].transform.GetChild(2).GetComponent<TMP_Text>();
@@ -88,36 +95,43 @@ public class KLD_GameManager : MonoBehaviour
     public void addNourriture(int _quantity)
     {
         ressources.nourriture += _quantity;
+        updateTowerUI();
     }
 
     public void addBois(int _quantity)
     {
         ressources.bois += _quantity;
+        updateTowerUI();
     }
 
     public void addPierre(int _quantity)
     {
         ressources.pierre += _quantity;
+        updateTowerUI();
     }
 
     public void addBronze(int _quantity)
     {
         ressources.bronze += _quantity;
+        updateTowerUI();
     }
 
     public void addFer(int _quantity)
     {
         ressources.fer += _quantity;
+        updateTowerUI();
     }
 
     public void addObsidienne(int _quantity)
     {
         ressources.obsidienne += _quantity;
+        updateTowerUI();
     }
 
     public void addAstate(int _quantity)
     {
         ressources.astate += _quantity;
+        updateTowerUI();
     }
 
     #endregion
@@ -144,6 +158,12 @@ public class KLD_GameManager : MonoBehaviour
             curVillageLevel++;
 
             updateTowerModel();
+            updateTowerUI();
+
+            villagePlacer.rotateObj.GetComponent<RectTransform>().position += Vector3.up * 0.1f;
+
+            Destroy(villagePlacer.towerEmpty.GetChild(0).gameObject);
+            Instantiate(towers[curVillageLevel], villagePlacer.towerEmpty.position, Quaternion.identity, villagePlacer.towerEmpty);
 
         }
     }
@@ -153,7 +173,7 @@ public class KLD_GameManager : MonoBehaviour
 
     }
 
-    void updateTowerUI()
+    public void updateTowerUI()
     {
         curNourritureText.text = ressources.nourriture.ToString();
         neededNourritureText.text = ressourcesPerLevel[curVillageLevel].nourriture.ToString();
@@ -175,8 +195,11 @@ public class KLD_GameManager : MonoBehaviour
 
         curAstateText.text = ressources.astate.ToString();
         neededAstateText.text = ressourcesPerLevel[curVillageLevel].astate.ToString();
+    }
 
-
+    public int getVillageLevel()
+    {
+        return curVillageLevel;
     }
 
 }
@@ -192,4 +215,10 @@ public class Ressource
     public int fer = 0;
     public int obsidienne = 0;
     public int astate = 0;
+}
+
+[System.Serializable]
+public class PrefabVariants
+{
+    public List<GameObject> prefabVariants = new List<GameObject>();
 }

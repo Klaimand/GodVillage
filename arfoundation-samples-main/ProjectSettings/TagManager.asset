@@ -5,6 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Minerals
+  - Fruits
+  - Baies
+  - Tree
+  - Meteorite
+  - Volcan
+  - Montagne
+  - Obsidienne
+  - Astate
+  - Pierre
+  - Bois
   layers:
   - Default
   - TransparentFX
