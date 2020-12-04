@@ -72,8 +72,11 @@ public class KLD_VillagePlacer : MonoBehaviour
             Debug.LogError("there is no spawnedobj");
             print("there is no spawnedobj_p");
         }
+    }
 
-
+    public void validateScale()
+    {
+        curTouchScaler.isScalable = false;
     }
 
     void getCurVillageInst()

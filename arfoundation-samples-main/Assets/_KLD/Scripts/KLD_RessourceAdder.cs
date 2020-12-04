@@ -6,6 +6,9 @@ public class KLD_RessourceAdder : MonoBehaviour
 {
     KLD_GameManager gameManager;
 
+    [SerializeField]
+    GameObject respawner;
+
     public enum RessourceType
     {
         NOURRITURE,
@@ -33,6 +36,7 @@ public class KLD_RessourceAdder : MonoBehaviour
         if (detectClick())
         {
             addRessource();
+            Instantiate(respawner, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

@@ -555,8 +555,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202f55553a0910c4c84f3d4761f9e6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawner: {fileID: 7405606436032121634, guid: 3f02a663cae4d1541a7b9290859fab03,
+    type: 3}
   ressourceToAdd: 1
-  minMaxQuantity: {x: 20, y: 60}
+  minMaxQuantity: {x: 3, y: 7}
 --- !u!65 &740422544839089033
 BoxCollider:
   m_ObjectHideFlags: 0

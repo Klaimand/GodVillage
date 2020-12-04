@@ -137,8 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202f55553a0910c4c84f3d4761f9e6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawner: {fileID: 4795942416489437849, guid: a7b0385e3d316bc419bbb0f4390e59db,
+    type: 3}
   ressourceToAdd: 2
-  minMaxQuantity: {x: 20, y: 60}
+  minMaxQuantity: {x: 3, y: 7}
 --- !u!1 &4775290235580479185
 GameObject:
   m_ObjectHideFlags: 0
