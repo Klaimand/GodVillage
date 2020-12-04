@@ -28,7 +28,7 @@ public class BDC_TreeMinigame : MonoBehaviour
 
                 if (treeTouchCount > numberofTouchRequiredTree)
                 {                  
-                   
+                    //instantiate ressources
                     treeTouchCount = 0;
                     Destroy(gameObject);
                 }

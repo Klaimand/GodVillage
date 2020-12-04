@@ -32,7 +32,7 @@ public class BDC_MiningMinigame : MonoBehaviour
 
             if (miningTouchCount > numberOfTouchRequiredMining)
             {
-
+                //instantiate ressources
                 miningTouchCount = 0;
                 Destroy(gameObject);
             }

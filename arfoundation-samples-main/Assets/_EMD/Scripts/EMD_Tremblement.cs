@@ -12,7 +12,7 @@ public class EMD_Tremblement : MonoBehaviour
     public float Timer;
     bool IsShacking = false;
     bool IsDone = false;
-    public int VillageLevel;
+    public int VillageLevel; //Récupérer le niveau de village 
 
     private void Start()
     {
@@ -31,9 +31,9 @@ public class EMD_Tremblement : MonoBehaviour
         if (Timer <= 0 && IsDone == false)
         {
             IsShacking = false;
+            //instantiate ressources
             Instantiate(Obsidienne, BasePos, Quaternion.identity);
             Destroy(Volcan);
-            //Obsidienne.SetActive(true);
             IsDone = true;
         }
     }
