@@ -113,9 +113,13 @@ public class KLD_MenuFunctions : MonoBehaviour
 
             //inst
             int curRessourceIndex = i % gameManager.ressourcesPrefabs.Count;
+            int curRessourceNbOfPrefabs = gameManager.ressourcesPrefabs[curRessourceIndex].prefabVariants.Count;
+            int randomPrefabNb = Random.Range(0, curRessourceNbOfPrefabs);
             print("RessourceIndex : " + curRessourceIndex);
-            //GameObject objToInst = gameManager.ressourcesPrefabs[0][1];
-            Instantiate(spawnPointObj, verifiedSpPosition, Quaternion.identity);
+            GameObject objToInst = gameManager.ressourcesPrefabs[curRessourceIndex].prefabVariants[randomPrefabNb];
+            //Instantiate(spawnPointObj, verifiedSpPosition, Quaternion.identity);
+            Instantiate(objToInst, verifiedSpPosition, Quaternion.identity);
+
 
         }
     }

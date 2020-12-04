@@ -2,12 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class _BaiesCollider : MonoBehaviour
+public class KLD_GoButton : MonoBehaviour
 {
+    // Start is called before the first frame update
+    void Start()
+    {
 
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
+        destroyOnClick();
+    }
 
-    private void Update()
+    void destroyOnClick()
     {
         if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
         {
@@ -16,10 +25,10 @@ public class _BaiesCollider : MonoBehaviour
 
             if (Physics.Raycast(raycast, out hit))
             {
-                if (hit.collider.gameObject.CompareTag("Baies"))
+                if (hit.collider.gameObject == gameObject)
                 {
-                    // Ajouter Ajout ressources
-                    Destroy(hit.collider.gameObject);
+
+                    Destroy(gameObject);
                 }
             }
         }

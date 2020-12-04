@@ -17,14 +17,14 @@ public class _FruitsCollider : MonoBehaviour
         {
             Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit hit;
-            
+
             if (Physics.Raycast(raycast, out hit))
             {
-                if (hit.collider.gameObject.CompareTag("Fruits"))
+                if (hit.collider.gameObject == gameObject)
                 {
                     fruitsGame.numberOfFruits -= 1;
                     print(gameObject.name + "Destroyed by " + this.name);
-                    Destroy(hit.collider.gameObject);
+                    Destroy(gameObject);
                 }
             }
         }

@@ -92,36 +92,43 @@ public class KLD_GameManager : MonoBehaviour
     public void addNourriture(int _quantity)
     {
         ressources.nourriture += _quantity;
+        updateTowerUI();
     }
 
     public void addBois(int _quantity)
     {
         ressources.bois += _quantity;
+        updateTowerUI();
     }
 
     public void addPierre(int _quantity)
     {
         ressources.pierre += _quantity;
+        updateTowerUI();
     }
 
     public void addBronze(int _quantity)
     {
         ressources.bronze += _quantity;
+        updateTowerUI();
     }
 
     public void addFer(int _quantity)
     {
         ressources.fer += _quantity;
+        updateTowerUI();
     }
 
     public void addObsidienne(int _quantity)
     {
         ressources.obsidienne += _quantity;
+        updateTowerUI();
     }
 
     public void addAstate(int _quantity)
     {
         ressources.astate += _quantity;
+        updateTowerUI();
     }
 
     #endregion
