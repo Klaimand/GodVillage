@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8281544463387839748}
   m_Layer: 0
-  m_Name: Maison1 1
+  m_Name: Maison1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,7 +169,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a164fb728e8e1b4dbae0b64a4b89bcb, type: 2}
+  - {fileID: 2100000, guid: 854a145277343454080883a0df262f0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
