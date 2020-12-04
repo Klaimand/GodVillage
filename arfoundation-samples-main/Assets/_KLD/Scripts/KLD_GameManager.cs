@@ -32,6 +32,9 @@ public class KLD_GameManager : MonoBehaviour
 
     public Transform simulationCam;
 
+    //public List<List<GameObject>> ressourcesPrefabs = new List<List<GameObject>>();
+    public List<PrefabVariants> ressourcesPrefabs = new List<PrefabVariants>();
+
     /*
     public enum RessourceType
     {
@@ -191,4 +194,10 @@ public class Ressource
     public int fer = 0;
     public int obsidienne = 0;
     public int astate = 0;
+}
+
+[System.Serializable]
+public class PrefabVariants
+{
+    public List<GameObject> prefabVariants = new List<GameObject>();
 }

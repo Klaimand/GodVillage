@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: Spawn Points
+  m_Text: Spawn 10 Points
 --- !u!222 &279368323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338257585dd560e4db48eeee2d92312c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 344447877}
   arSessionOrigin: {fileID: 1335839535}
   minDistanceBetweenPoints: 10
   spawnPointObj: {fileID: 4976418860228433763, guid: 95535a1624a9db545a52f3264fad7981,
@@ -497,6 +498,14 @@ MonoBehaviour:
   - {fileID: 0}
   towers: []
   simulationCam: {fileID: 282840814}
+  ressourcesPrefabs:
+  - prefabVariants: []
+  - prefabVariants: []
+  - prefabVariants: []
+  - prefabVariants: []
+  - prefabVariants: []
+  - prefabVariants: []
+  - prefabVariants: []
 --- !u!114 &427002219 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3811591508773167256, guid: 90290c13d4a3d46eea32be3d6a1a14c4,
@@ -675,7 +684,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

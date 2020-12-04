@@ -28,8 +28,16 @@ public class KLD_WorldCanvasToCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        doCanvasAlpha();
-        doCanvasRotation();
+        if (targetCam != null)
+        {
+            doCanvasAlpha();
+            doCanvasRotation();
+        }
+        else
+        {
+            canvasGroup.alpha = 0f;
+        }
+
     }
 
     void doCanvasAlpha()

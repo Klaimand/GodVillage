@@ -84,7 +84,7 @@ public class KLD_TouchScaler : MonoBehaviour
         {
             //meshRenderer.material.color = Color.red;
             lastFrameNoTouch = true;
-            print("not enough touches");
+            //print("not enough touches");
         }
     }
 

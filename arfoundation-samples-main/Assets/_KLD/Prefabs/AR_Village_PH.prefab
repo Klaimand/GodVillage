@@ -27,7 +27,7 @@ MonoBehaviour:
   rotateObj: {fileID: 4171197801774098842}
   targetCam: {fileID: 0}
   canvasGroup: {fileID: 4171197801625022890}
-  minMaxFadeDistance: {x: 1.5, y: 4}
+  minMaxFadeDistance: {x: 1, y: 2}
   damping: 8
 --- !u!1 &4171197799892063314
 GameObject:
@@ -1131,7 +1131,7 @@ Transform:
   m_GameObject: {fileID: 4171197801195534408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_Children:
   - {fileID: 4171197801417085081}
   - {fileID: 4171197801774098842}
@@ -1150,8 +1150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06f52ef24005404c91ff5205ddb73f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minMaxScale: {x: 0.02, y: 0.2}
-  sensitivity: 0.02
+  minMaxScale: {x: 0.03, y: 0.14}
+  sensitivity: 0.01
   isScalable: 0
 --- !u!1 &4171197801312521469
 GameObject:
@@ -1533,6 +1533,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TowerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393374125523819253, guid: 7dab8b6f2c111a34089e1153c7790ff9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3393374125523819254, guid: 7dab8b6f2c111a34089e1153c7790ff9,
         type: 3}

@@ -8,6 +8,9 @@ public class KLD_MenuFunctions : MonoBehaviour
 {
 
     [SerializeField]
+    KLD_GameManager gameManager;
+
+    [SerializeField]
     Transform arSessionOrigin;
 
     ARPlaneManager planeManager;
@@ -109,8 +112,20 @@ public class KLD_MenuFunctions : MonoBehaviour
             } while (!isCurPointValid);
 
             //inst
+            int curRessourceIndex = i % gameManager.ressourcesPrefabs.Count;
+            print("RessourceIndex : " + curRessourceIndex);
+            //GameObject objToInst = gameManager.ressourcesPrefabs[0][1];
             Instantiate(spawnPointObj, verifiedSpPosition, Quaternion.identity);
 
+        }
+    }
+
+
+    public void testfunc()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            print(i % 7);
         }
     }
 
