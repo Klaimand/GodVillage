@@ -7,6 +7,11 @@ TagManager:
   - Minerals
   - Fruits
   - Baies
+  - Tree
+  - Meteorite
+  - Volcan
+  - Montagne
+  - Obsidienne
   layers:
   - Default
   - TransparentFX

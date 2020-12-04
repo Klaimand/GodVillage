@@ -88,6 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5218486298827418721}
+  - component: {fileID: -8541930717168282795}
   m_Layer: 0
   m_Name: volcan1
   m_TagString: Untagged
@@ -111,6 +112,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-8541930717168282795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4836893553091786459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf60a5d627ad44742b03ff6abb2d741d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volcan: {fileID: 4836893553091786459}
+  Obsidienne: {fileID: 7758310301296793686, guid: 64a3e6e97c55b0c4da63b57ed325c843,
+    type: 3}
+  shakeAmount: 1
+  Timer: 2
+  VillageLevel: 4
 --- !u!1 &7095043669156870362
 GameObject:
   m_ObjectHideFlags: 0
