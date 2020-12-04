@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ressourceToAdd: 2
-  minMaxQuantity: {x: 3, y: 6}
+  minMaxQuantity: {x: 20, y: 60}
 --- !u!1 &4775290235580479185
 GameObject:
   m_ObjectHideFlags: 0

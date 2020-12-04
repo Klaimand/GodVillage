@@ -6,6 +6,8 @@ using TMPro;
 
 public class KLD_GameManager : MonoBehaviour
 {
+    KLD_VillagePlacer villagePlacer;
+
     [Header("Ressources"), SerializeField]
     Ressource ressources;
 
@@ -53,6 +55,7 @@ public class KLD_GameManager : MonoBehaviour
     {
         //initializeTextes();
         //updateTowerUI();
+        villagePlacer = GetComponent<KLD_VillagePlacer>();
     }
 
     // Update is called once per frame
@@ -156,6 +159,11 @@ public class KLD_GameManager : MonoBehaviour
 
             updateTowerModel();
             updateTowerUI();
+
+            villagePlacer.rotateObj.GetComponent<RectTransform>().position += Vector3.up * 0.1f;
+
+            Destroy(villagePlacer.towerEmpty.GetChild(0).gameObject);
+            Instantiate(towers[curVillageLevel], villagePlacer.towerEmpty.position, Quaternion.identity, villagePlacer.towerEmpty);
 
         }
     }

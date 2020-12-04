@@ -15,6 +15,8 @@ public class KLD_VillagePlacer : MonoBehaviour
     KLD_TouchScaler curTouchScaler;
 
     KLD_GameManager gameManager;
+    public Transform towerEmpty;
+    public Transform rotateObj;
 
     private void Awake()
     {
@@ -57,6 +59,10 @@ public class KLD_VillagePlacer : MonoBehaviour
             KLD_Village_Variables curVillage_Variables = spawnedObjInst.GetComponent<KLD_Village_Variables>();
             curVillage_Variables.assignTargetCam(gameManager.simulationCam);
             gameManager.RessourceUIParents = curVillage_Variables.RessourceUIParentsInst;
+
+            towerEmpty = curVillage_Variables.towerEmpty;
+            rotateObj = curVillage_Variables.rotateObj;
+
             gameManager.initializeTextes();
             gameManager.updateTowerUI();
 

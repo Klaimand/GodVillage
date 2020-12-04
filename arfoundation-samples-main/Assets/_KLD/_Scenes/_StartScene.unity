@@ -522,6 +522,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeOnPlane: {fileID: 1335839538}
+  towerEmpty: {fileID: 0}
+  rotateObj: {fileID: 0}
 --- !u!114 &344447875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +628,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  towers: []
+  towers:
+  - {fileID: 8565380954836873715, guid: c648c9b164e19f74ba7c64eb8f3143e3, type: 3}
+  - {fileID: 5641846166250179076, guid: a82ad2ab93971044687f9baeed4977ca, type: 3}
+  - {fileID: 1173387627654419584, guid: f09665edcc21eff4a8afdd0087800a51, type: 3}
+  - {fileID: 3872708569630121168, guid: efdfc8af9e891694785227d4c189ec2f, type: 3}
+  - {fileID: 7799092348432631696, guid: de1392bca706755459019bef314c8d62, type: 3}
+  - {fileID: 2792154894491536419, guid: ea2ab0e8e7ec3214792e3b4d6dcf8f97, type: 3}
   simulationCam: {fileID: 282840814}
   ressourcesPrefabs:
   - prefabVariants:
@@ -642,6 +650,12 @@ MonoBehaviour:
     - {fileID: 3597350541078004076, guid: 609e354948c0f854ea8a3dab0ce1b6fe, type: 3}
   - prefabVariants:
     - {fileID: 6930585712716043572, guid: 0911f0103b7755a488f8b825b371d9a6, type: 3}
+  - prefabVariants:
+    - {fileID: 6538988767758243412, guid: 89c0de1dd77594e48ab31e5f3db79106, type: 3}
+  - prefabVariants:
+    - {fileID: 5931087645294363863, guid: 1feb529bbce1a1745a4193d941f3592a, type: 3}
+  - prefabVariants:
+    - {fileID: 2393449860732853123, guid: 4fe7fce1170737b408c2ec3b175f8008, type: 3}
 --- !u!114 &427002219 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3811591508773167256, guid: 90290c13d4a3d46eea32be3d6a1a14c4,
@@ -2194,7 +2208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5359d5f13250e4485741ed685a32be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlacedPrefab: {fileID: 4171197800974693511, guid: e6adcca202798d546927dd0d3b09968b,
+  m_PlacedPrefab: {fileID: 2587759017284391481, guid: d30cbb507bf3f564a98de8a389bdc793,
     type: 3}
 --- !u!114 &1335839539
 MonoBehaviour:

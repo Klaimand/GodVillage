@@ -10,6 +10,10 @@ public class KLD_Village_Variables : MonoBehaviour
     [SerializeField]
     KLD_WorldCanvasToCam worldCanvasToCam;
 
+    public Transform towerEmpty;
+
+    public Transform rotateObj;
+
     // Start is called before the first frame update
     void Start()
     {

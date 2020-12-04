@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ressourceToAdd: 1
-  minMaxQuantity: {x: 3, y: 6}
+  minMaxQuantity: {x: 20, y: 60}
 --- !u!65 &740422544839089033
 BoxCollider:
   m_ObjectHideFlags: 0
